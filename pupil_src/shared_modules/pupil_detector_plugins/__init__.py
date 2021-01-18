@@ -40,7 +40,7 @@ def available_detector_plugins() -> T.List[T.Type[PupilDetectorPlugin]]:
     all_plugins: T.List[T.Type[PupilDetectorPlugin]] = [Detector2DPlugin]
 
     try:
-        from .pye3d_plugin import Pye3DPlugin
+        from pupil_detector_plugins.pye3d_plugin import Pye3DPlugin
     except ImportError:
         logger.info("Refraction corrected 3D pupil detector not available!")
         logger.debug(traceback.format_exc())
